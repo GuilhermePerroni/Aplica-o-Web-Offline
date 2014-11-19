@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html manifest="offlinedatabase.manifest">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/foundation.css" />
+        <script src="js/vendor/modernizr.js"></script>
+
+        <title> Teste De Banco de Dados OffLine ;) </title>
+        <script type="text/javascript" src="record/utils.js" ></script>
+        <script type="text/javascript" src="record/db.js" ></script>
+        <script type="text/javascript" src="record/persistencia.js" ></script>
+        <script type="text/javascript" src="record/crudgeral.js" ></script>
+    </head>
+    <body onload="onInit()">
+
+    <div class="row">
+        <div class="large-12 columns">
+
+            <ul  id="itemData" style="cursor:pointer;"></ul>
+
+            <a href="#" data-reveal-id="myModal">Cadastro Exemplo</a>
+            <div id="myModal" class="reveal-modal" data-reveal>
+                <h2>Parte Básica de um Cadastro</h2>
+                <p class="lead">Insira os Dados Corretamente</p>
+                <p>
+
+                    <form name="itemForm">
+                        <label for="id">Id:</label><input type="text" name="id" id="id" size=2 disabled="true"/>
+                        <label for="nome">Nome:</label><input type="text" name="nome" id="nome" size=10/>
+                        <label for="idade">Idade</label><input type="text" name="idade" id="idade" size=3 /> <br>
+                        <br>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <input class="button [small]" type="button" name="Novo" value="Novo" onclick="onInsert()" />   
+                                <input class="button" type="button" name="Edita" value="Edita" onclick="onUpdate()" />
+                                <input class="button" type="button" name="Deleta" value="Atualiza" onclick="onDelete()" />
+                            </div>
+                        </div>
+                    </form>
+
+                </p>
+                <a class="close-reveal-modal">&#215;</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="status"></div>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    </body>
+</html>
+
